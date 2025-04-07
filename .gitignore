@@ -1,0 +1,8 @@
+*.txt
+crossXO
+rotateTri
+squareXO
+
+.vscode/launch.json
+.vscode/settings.json
+.vscode/tasks.json
