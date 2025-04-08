@@ -24,6 +24,9 @@ minRadius = 2
 maxRadius = 120
 num_circles = 20
 
+last_i = num_circles
+first_i = 1
+
 '''
 Let's assume y is radius and x is i(index of circles):
 first, use linear equation to find the slope(the radius increment of each circle)
@@ -33,15 +36,15 @@ y = mx + c --> radius = m * i + c
 '''
 
 #find slope, first and last circles are known:
-m = (maxRadius - minRadius) / 20 - 1
+m = (maxRadius - minRadius) / (last_i - first_i)
 # find height of the line graph:
 c = minRadius - m * 1 #use first circle; we can also use last circle to find c 
 
 # == First cone of circles:
-for i in range(num_circles):
-  if i == 0:
+for i in range(1, num_circles + 1):
+  if i == 1:
     t.circle(minRadius)
-  elif (i == num_circles -1):
+  elif (i == num_circles + 1):
     t.circle(maxRadius)
   else:
     t.circle(m * i + c)
@@ -67,7 +70,7 @@ for i in range(1, num_circles + 1):
   t.forward(5)
   t.right(90)
   t.pendown()
-  print("i is ", i)
+  print("circle ", i, " radius is ", m*i+c)
 	
 
 screen.exitonclick() #keep window open until it's terminated

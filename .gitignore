@@ -6,3 +6,4 @@ squareXO
 .vscode/launch.json
 .vscode/settings.json
 .vscode/tasks.json
+.DS_Store
