@@ -2,17 +2,18 @@
 # https://github.com/asweigart/simple-turtle-tutorial-for-python/blob/master/draw_circles.py
 
 import turtle
+import math
 
-# maxRadius = int(input('Enter the max radius: '))
-# minRadius = int(input('Enter the min radius: '))
-# numCircles = int(input('Enter number of circles: '))
+minRadius = int(input('Enter the min radius: '))
+maxRadius = int(input('Enter the max radius: '))
+num_circles = int(input('Enter number of circles: '))
 
 t = turtle.Turtle()
 screen = turtle.Screen()
 
 # t.bgcolor("pink")
 t.penup()
-t.goto(-100, -150)
+t.goto(-120, -150)
 t.pendown()
 
 t.pensize(2)
@@ -20,9 +21,9 @@ t.pensize(2)
 t.pencolor("purple")
 t.speed(15)
 
-minRadius = 2
-maxRadius = 120
-num_circles = 20
+# minRadius = 2
+# maxRadius = 120
+# num_circles = 20
 
 last_i = num_circles
 first_i = 1
@@ -58,7 +59,7 @@ for i in range(1, num_circles + 1):
 
 # == Second cone of cicirles:
 t.penup()
-t.goto(150, -150)
+t.goto(130, -150)
 t.pendown()
 t.pencolor("green")
 
@@ -70,8 +71,7 @@ for i in range(1, num_circles + 1):
   t.forward(5)
   t.right(90)
   t.pendown()
-  print("circle ", i, " radius is ", m*i+c)
+  print("circle ", i, " radius is ", math.ceil( m*i+c))
 	
-
 screen.exitonclick() #keep window open until it's terminated
 t.mainloop() #this will keep graphic window opened until window it's terminated
