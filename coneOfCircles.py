@@ -1,4 +1,5 @@
-# set interpreter: 3.9.7('base') conda or 3.8.2
+############ NOTE !!!! ##########
+# Set interpreter: 3.9.7('base') conda or 3.8.2
 # https://github.com/asweigart/simple-turtle-tutorial-for-python/blob/master/draw_circles.py
 
 import turtle
