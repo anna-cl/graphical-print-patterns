@@ -24,15 +24,18 @@ screen = turtle.Screen()
 t.pensize(2)
 # t.pencolor(169, 169, 255)
 t.pencolor("pink")
-t.speed(5)
+t.speed(10)
 
-t.fillcolor('yellow')
-t.begin_fill()
-t.circle(100,90)
-t.left(90)
-t.circle(100,90)
-t.end_fill()
-t.right(360/num_petals)
+for i in range(num_petals):
+    t.fillcolor('yellow')
+    t.begin_fill()
+    t.circle(100,90)
+    t.left(90)
+    t.circle(100,90)
+    t.end_fill()
+    t.right(360/num_petals)
+
+
 
 
 screen.exitonclick() #keep window open until it's terminated
