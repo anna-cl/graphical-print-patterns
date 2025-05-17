@@ -7,7 +7,7 @@
 
 import turtle
 
-num_petals = int(input('Enter the number of petal(8 16 32 64...2 to the power): '))
+num_petals = int(input('--> Enter the number of petal(8 16 32 64...2 to the power): '))
 
 while (num_petals < 8 or (num_petals & (num_petals -1) != 0)):
     if num_petals < 8:
@@ -16,7 +16,7 @@ while (num_petals < 8 or (num_petals & (num_petals -1) != 0)):
         print("number must be the power of 2.")
     num_petals = int(input('Enter the number of petal(8 16 32 64...2 to the power): '))
 
-flower_size = int(input('Enter the size of flower(50-200): '))
+flower_size = int(input('--> Enter the size of flower(50-200): '))
 
 while(flower_size < 50 or flower_size > 200):
     print("flower size must be between 50 to 200")
@@ -53,4 +53,4 @@ for j in range(4): # 4 layers of the flower
     radius -= radius_decrement
 
 screen.exitonclick() #keep window open until it's terminated
-t.mainloop() #this will keep graphic window opened until window it's terminated
+# t.mainloop() #this will keep graphic window opened until window it's terminated
